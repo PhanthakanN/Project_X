@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+
+    <ImageView
+        android:id="@+id/img_profile"
+        android:layout_width="150dp"
+        android:layout_height="150sp"
+        android:src="@drawable/aaa"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"/>
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="200dp"
+        android:layout_height="25dp"
+        android:hint="ไอดี"
+        android:background="#DADADA"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="200dp"
+        android:layout_height="25dp"
+        android:hint="รหัสผ่าน"
+        android:background="#DADADA"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="250dp"
+        android:inputType="textPassword"/>
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="200dp"
+        android:layout_height="25dp"
+        android:hint="อีเมลย์"
+        android:background="#DADADA"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="300dp" />
+
+    <EditText
+        android:id="@+id/gen"
+        android:layout_width="200dp"
+        android:layout_height="25dp"
+        android:hint="เพศ"
+        android:background="#DADADA"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="350dp" />
+
+    <Button
+        android:id="@+id/btn_reg_finish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="400dp" />
+
+</RelativeLayout>

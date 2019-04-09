@@ -1,0 +1,44 @@
+{
+  "project_info": {
+    "project_number": "872514776797",
+    "firebase_url": "https://calorie-healthy.firebaseio.com",
+    "project_id": "calorie-healthy",
+    "storage_bucket": "calorie-healthy.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:872514776797:android:4c9a02cc23155927",
+        "android_client_info": {
+          "package_name": "com.project.caloriehealthty7"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "872514776797-nlkpjh153jspfl2nqlrm89a3qer24en6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.project.caloriehealthty7",
+            "certificate_hash": "374e82c3ca0db5aad085bd5af74bb293d6f57f0c"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBpU61feBO3kqQpfHJwaaOV421CH5QLrM4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "872514776797-68na8p9fauqatd3kl1mteo6lbrnmrpkb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
