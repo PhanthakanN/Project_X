@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WaterrActivity"
+    android:background="@drawable/warera">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <TextView
+            android:id="@+id/nub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0/8"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:textSize="50dp"/>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/fame"
+        android:layout_width="150dp"
+        android:layout_height="250dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+
+       <com.john.waveview.WaveView
+           android:layout_marginBottom="10dp"
+           android:id="@+id/wave_view"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:background="#2500B1FF"
+           tools:above_wave_color="#000099FF"
+           tools:blow_wave_color="#0000C4FF"
+           tools:progress="0"
+           tools:wave_height="little"
+           tools:wave_hz="normal"
+           tools:wave_length="middle" />
+
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/btn_1"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/fame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="+1"/>
+
+    <Button
+        android:id="@+id/btn_0"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/btn_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="-1"/>
+
+</RelativeLayout>

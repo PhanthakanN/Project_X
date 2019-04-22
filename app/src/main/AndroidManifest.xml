@@ -12,8 +12,16 @@
         android:label="Calorie Healthy"
         android:roundIcon="@drawable/icon"
         android:supportsRtl="true"
+        android:largeHeap="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CalActivity"></activity>
+        <activity android:name=".HistoryActivity"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:name=".AddmaduActivity" />
+        <activity android:name=".AddfoodActivity"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:name=".ExActivity" />
+        <activity android:name=".WaterrActivity" />
+        <activity android:name=".CalActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".RegisterActivity" />

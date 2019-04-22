@@ -12,7 +12,8 @@
         android:layout_height="150sp"
         android:src="@drawable/aaa"
         android:layout_marginTop="30dp"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:inputType="text"/>
 
     <EditText
         android:id="@+id/name"
@@ -21,7 +22,8 @@
         android:hint="ไอดี"
         android:background="#DADADA"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="200dp" />
+        android:layout_marginTop="200dp"
+        android:inputType="text"/>
 
     <EditText
         android:id="@+id/password"
@@ -40,7 +42,8 @@
         android:hint="อีเมลย์"
         android:background="#DADADA"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="300dp" />
+        android:layout_marginTop="300dp"
+        android:inputType="text"/>
 
     <EditText
         android:id="@+id/gen"
@@ -49,7 +52,8 @@
         android:hint="เพศ"
         android:background="#DADADA"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="350dp" />
+        android:layout_marginTop="350dp"
+        android:inputType="text"/>
 
     <Button
         android:id="@+id/btn_reg_finish"

@@ -40,6 +40,11 @@ public class MainActivity extends AppCompatActivity {
     ViewFlipper flipper;
 
     ImageView calpure;
+    ImageView wttt;
+    ImageView exx;
+    ImageView food;
+    ImageView add;
+    ImageView history;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,12 +58,21 @@ public class MainActivity extends AppCompatActivity {
 
         calpure = findViewById(R.id.calpure);
 
-        int[] images = {R.drawable.load1, R.drawable.load2, R.drawable.load3, R.drawable.load4, R.drawable.load5, R.drawable.load6};
+        wttt = findViewById(R.id.wttt);
+
+        exx = findViewById(R.id.exx);
+
+        food = findViewById(R.id.food);
+
+        add = findViewById(R.id.add);
+
+        history = findViewById(R.id.history);
+
+        int[] images = {R.drawable.fd1, R.drawable.fd2, R.drawable.fd3, R.drawable.fd4, R.drawable.fd5, R.drawable.fd6, R.drawable.fd7, R.drawable.fd8};
 
         for(int i=0;i<images.length;i++)
         {
             setFlipperImage(images[i]);
-
         }
 
         flipper.startFlipping();
@@ -93,6 +107,41 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, CalActivity.class));
+            }
+        });
+
+        wttt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, WaterrActivity.class));
+            }
+        });
+
+        food.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, AddfoodActivity.class));
+            }
+        });
+
+        exx.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, ExActivity.class));
+            }
+        });
+
+        add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, AddmaduActivity.class));
+            }
+        });
+
+        history.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, HistoryActivity.class));
             }
         });
 
