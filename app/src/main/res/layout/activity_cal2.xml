@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Cal2Activity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/profile">
+
+            <RelativeLayout
+                android:layout_marginTop="73dp"
+                android:layout_width="match_parent"
+                android:layout_height="500dp">
+
+                <TextView
+                    android:id="@+id/txt1"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ค่า BMI"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="30dp"
+                    android:textColor="#000"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"/>
+
+                <RelativeLayout
+                    android:id="@+id/rev"
+                    android:layout_below="@id/txt1"
+                    android:layout_width="match_parent"
+                    android:layout_height="293dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bgdata"
+                        android:layout_centerHorizontal="true"/>
+
+                    <RelativeLayout
+                        android:id="@+id/rev3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bgwhite2"
+                            />
+
+                        <RelativeLayout
+                            android:id="@+id/rev4"
+                            android:layout_width="120dp"
+                            android:layout_height="210dp"
+                            android:layout_marginLeft="90dp">
+
+                            <TextView
+                                android:id="@+id/high"
+                                android:layout_width="95dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="40dp"
+                                android:layout_centerHorizontal="true"
+                                android:maxLines="1"
+                                android:ems="1"
+                                android:textColor="#000"
+                                android:textSize="10dp"
+                                android:background="@drawable/chong"
+                                android:padding="5dp"/>
+
+                            <TextView
+                                android:id="@+id/width"
+                                android:layout_width="95dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="85dp"
+                                android:layout_centerHorizontal="true"
+                                android:maxLines="1"
+                                android:ems="1"
+                                android:textColor="#000"
+                                android:textSize="10dp"
+                                android:background="@drawable/chong"
+                                android:padding="5dp"/>
+
+                            <TextView
+                                android:id="@+id/age"
+                                android:layout_width="95dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="131dp"
+                                android:layout_centerHorizontal="true"
+                                android:maxLines="1"
+                                android:ems="1"
+                                android:textColor="#000"
+                                android:textSize="10dp"
+                                android:background="@drawable/chong"
+                                android:padding="5dp"/>
+
+
+                        </RelativeLayout>
+
+                        <ImageView
+                            android:id="@+id/sex"
+                            android:layout_marginTop="170dp"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_centerHorizontal="true" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/bmi"
+                    android:layout_below="@+id/rev"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="30dp"
+                    android:textColor="#000"
+                    android:textStyle="bold"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    />
+
+                <Button
+                    android:id="@+id/edit"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@id/bmi"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="แก้ไขข้อมูล"/>
+
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>

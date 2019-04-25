@@ -5,7 +5,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.project.caloriehealthty7.Adapter.CalAdapter;
+import com.project.caloriehealthty7.Model.Cal;
 import com.project.caloriehealthty7.Model.Menu;
+
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -19,7 +24,11 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 import java.util.TimeZone;
 
 public class AddmaduActivity extends AppCompatActivity {
@@ -31,6 +40,12 @@ public class AddmaduActivity extends AppCompatActivity {
     DatabaseReference ref;
     FirebaseAuth mAuth;
     FirebaseUser curUser;
+
+    RecyclerView recadd;
+    CalAdapter menuAdapter;
+    List<Cal> mMenu;
+
+    DatabaseReference reference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,6 +97,44 @@ public class AddmaduActivity extends AppCompatActivity {
                         }
                     });
                 }
+            }
+        });
+
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext());
+
+        recadd  = findViewById(R.id.reccal);
+        recadd.setHasFixedSize(true);
+        recadd.setLayoutManager(linearLayoutManager);
+
+        reference = FirebaseDatabase.getInstance().getReference("Cal");
+
+        reference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                mMenu = new ArrayList<>();
+                for (DataSnapshot postsnap : dataSnapshot.getChildren()) {
+                    Cal cal = postsnap.getValue(Cal.class);
+                    mMenu.add(cal);
+                }
+
+                Collections.sort(mMenu, new Comparator<Cal>() {
+                    @Override
+                    public int compare(Cal obj1, Cal obj2) {
+                        if (obj1.getNumber() > (obj2.getNumber())) {
+                            return 1;
+                        } else {
+                            return -1;
+                        }
+                    }
+                });
+
+                menuAdapter = new CalAdapter(getApplicationContext(), mMenu);
+                recadd.setAdapter(menuAdapter);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
             }
         });
     }

@@ -24,6 +24,7 @@ import com.project.caloriehealthty7.Adapter.MenuAdapter;
 import com.project.caloriehealthty7.Model.Menu;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
@@ -106,7 +107,6 @@ public class AddfoodActivity extends AppCompatActivity {
                     Menu menu = postsnap.getValue(Menu.class);
                     if(menu.getId().equals(fuser.getUid()))
                         mMenu.add(menu);
-
                 }
 
                 Collections.sort(mMenu, new Comparator<Menu>() {

@@ -9,16 +9,23 @@
     <application
         android:allowBackup="true"
         android:icon="@drawable/icon"
-        android:label="Calorie Healthy"
+        android:label="CAL MET"
+        android:largeHeap="true"
         android:roundIcon="@drawable/icon"
         android:supportsRtl="true"
-        android:largeHeap="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".HistoryActivity"
-            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:name=".KumActivity"></activity>
+        <activity android:name=".HisActivity" />
+        <activity android:name=".AddActivity" />
+        <activity android:name=".Cal3Activity" />
+        <activity android:name=".Cal2Activity" />
+        <activity
+            android:name=".HistoryActivity"
+            android:windowSoftInputMode="stateAlwaysHidden" />
         <activity android:name=".AddmaduActivity" />
-        <activity android:name=".AddfoodActivity"
-            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity
+            android:name=".AddfoodActivity"
+            android:windowSoftInputMode="stateAlwaysHidden" />
         <activity android:name=".ExActivity" />
         <activity android:name=".WaterrActivity" />
         <activity android:name=".CalActivity" />

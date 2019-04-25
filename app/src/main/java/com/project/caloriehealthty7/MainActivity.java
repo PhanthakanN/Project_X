@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
     ImageView food;
     ImageView add;
     ImageView history;
+    ImageView num;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,7 +69,9 @@ public class MainActivity extends AppCompatActivity {
 
         history = findViewById(R.id.history);
 
-        int[] images = {R.drawable.fd1, R.drawable.fd2, R.drawable.fd3, R.drawable.fd4, R.drawable.fd5, R.drawable.fd6, R.drawable.fd7, R.drawable.fd8};
+        num = findViewById(R.id.num);
+
+        int[] images = {R.drawable.s1, R.drawable.s2, R.drawable.s3, R.drawable.s4, R.drawable.s5};
 
         for(int i=0;i<images.length;i++)
         {
@@ -106,7 +109,25 @@ public class MainActivity extends AppCompatActivity {
         calpure.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, CalActivity.class));
+                reference = FirebaseDatabase.getInstance().getReference("Profile").child(firebaseUser.getUid());
+
+                reference.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                        if (dataSnapshot.exists()) {
+                            startActivity(new Intent(MainActivity.this, Cal2Activity.class));
+                        } else {
+                            startActivity(new Intent(MainActivity.this, CalActivity.class));
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+
             }
         });
 
@@ -141,7 +162,14 @@ public class MainActivity extends AppCompatActivity {
         history.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, HistoryActivity.class));
+                startActivity(new Intent(MainActivity.this, HisActivity.class));
+            }
+        });
+
+        num.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, KumActivity.class));
             }
         });
 

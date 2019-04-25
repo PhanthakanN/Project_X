@@ -62,7 +62,7 @@
                 android:id="@+id/flipper"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:layout_below="@id/topbar"/>
+                android:layout_below="@id/topbar" />
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -139,13 +139,14 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/lin2"
                 android:background="@drawable/ex"/>
+
             <ImageView
                 android:id="@+id/num"
-                android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/exx"
-                android:background="@drawable/num"/>
+                android:layout_marginTop="10dp"
+                android:background="@drawable/num" />
 
             <!--<TextView-->
                 <!--android:layout_width="wrap_content"-->
